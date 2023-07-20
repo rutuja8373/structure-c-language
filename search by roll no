@@ -1,0 +1,37 @@
+//create struct student and accept student roll no and search if record found then display its detail
+#include<stdio.h>
+struct student
+{
+	char sname[20],sclass[10];
+	int rno;
+	float per;
+}s1[100];
+int main()
+{
+	int i,n,num;
+	printf("enter limit:");
+	scanf("%d",&n);
+	for(i=0;i<n;i++)
+	{
+		printf("\n Enter RNO NAME PERCENTAGE CLASS:");
+		scanf("%d%s%f%s",&s1[i].rno,&s1[i].sname,&s1[i].per,&s1[i].sclass);
+	}
+	printf("\n enter roll no to display:");
+	scanf("%d",&num);
+	for(i=0;i<n;i++)
+	{
+		if(s1[i].rno==num)
+		{
+			printf("\nRECORD IS FOUND....");
+			printf("\nRNO=%d",s1[i].rno);
+			printf("\nNAME=%s",s1[i].sname);
+			printf("\nPERCENTAGE=%.2f",s1[i].per);
+			printf("\nSTUDENT CLASS=%s",s1[i].sclass);
+			break;
+		}
+	}
+	if(i==n)
+	{
+		printf("\n record not found...");
+	}
+}
