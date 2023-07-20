@@ -1,0 +1,37 @@
+//write menu driven programe using function accept employe info and display
+#include<stdio.h>
+struct emp
+{
+	int eno;
+	char name[20];
+	float sal;
+}e1;
+int main()
+{
+	int ch;
+	void accept();
+	void disp();
+	do
+	{
+		printf("\n1-accept\n2-display");
+		printf("\nenter choice:");
+		scanf("%d",&ch);
+		switch(ch)
+		{
+			case 1:accept();
+			break;
+			case 2:disp();
+			break;
+			default :printf("\n invalid choice..");
+		}
+	}while(ch<3);	
+}
+void accept()
+	{
+		printf("\nenter eno name sal:");
+		scanf("%d%s%f",&e1.eno,&e1.name,&e1.sal);
+	}
+void disp()
+	{
+		printf("\n%d %s %.2f",e1.eno,e1.name,e1.sal);
+	}
