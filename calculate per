@@ -1,0 +1,24 @@
+//accept student rno name and six subject marks and display percentage
+#include<stdio.h>
+struct student
+{
+	char name[20];
+	int rno;
+	int m1,m2,m3,m4,m5,m6;
+}s1;
+int main()
+{
+	int total;
+	float per;
+	printf("enter rno:");
+	scanf("%d",&s1.rno);
+	printf("\nenter name:");
+	scanf("%s",&s1.name);
+	printf("enter six sub marks:");
+	scanf("%d%d%d%d%d%d",&s1.m1,&s1.m2,&s1.m3,&s1.m4,&s1.m5,&s1.m6);
+	
+	total=s1.m1+s1.m2+s1.m3+s1.m4+s1.m5+s1.m6;
+	per=total/6;
+	
+	printf("\n PERCENTAGE=%.2f",per);
+}
