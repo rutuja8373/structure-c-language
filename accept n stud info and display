@@ -1,0 +1,25 @@
+//accept n student info and display
+#include<stdio.h>
+struct student
+{
+	char sname[20],sclass[10];
+	int rno;
+	float per;
+}s1[100];
+int main()
+{
+	int i,n;
+	printf("enter limit:");
+	scanf("%d",&n);
+	for(i=0;i<n;i++)
+	{
+		printf("\n Enter RNO NAME PERCENTAGE CLASS:");
+		scanf("%d%s%f%s",&s1[i].rno,&s1[i].sname,&s1[i].per,&s1[i].sclass);
+	}
+	printf("\n RNO  NAME  PERCENTAGE CLASS");
+	printf("\n++++++++++++++++++++++++++++");
+	for(i=0;i<n;i++)
+	{
+		printf("\n%d\t%s\t%.2f\t%s",s1[i].rno,s1[i].sname,s1[i].per,s1[i].sclass);
+	}
+}
